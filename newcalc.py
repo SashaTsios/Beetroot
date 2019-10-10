@@ -33,30 +33,30 @@ if action == '+' or action == '-' or action == '/' or action == '*' or action ==
 		intORfloat1 = iv1 / fv1
 		intORfloat2 = iv2 / fv2
 		if intORfloat1 == 1.0 and intORfloat2 == 1.0:	
-			value1_new = int(float(value1))
-			value2_new = int(float(value2))
+			value1_new = int(value1)
+			value2_new = int(value2)
 		else:
 			value1_new = float(value1)
 			value2_new = float(value2)
 	elif fv1 == 0 and fv2 != 0:
 		intORfloat2 = iv2 / fv2
 		if intORfloat2 == 1.0:	
-			value1_new = int(float(value1))
-			value2_new = int(float(value2))
+			value1_new = int(value1)
+			value2_new = int(value2)
 		else:
 			value1_new = float(value1)
 			value2_new = float(value2)
 	elif fv1 != 0 and fv2 == 0:
 		intORfloat1 = iv1 / fv1
 		if intORfloat1 == 1.0:	
-			value1_new = int(float(value1))
-			value2_new = int(float(value2))
+			value1_new = int(value1)
+			value2_new = int(value2)
 		else:
 			value1_new = float(value1)
 			value2_new = float(value2)
 	else:		
-		value1_new = int(float(value1))
-		value2_new = int(float(value2))
+		value1_new = int(value1)
+		value2_new = int(value2)
 	if action == '+':
 		addition = value1_new + value2_new
 		print(addition)
@@ -92,7 +92,7 @@ elif action == '**2':
 	if iv1 != 0:
 		intORfloat1 = iv1 / fv1
 		if intORfloat1 == 1.0:	
-			value1_new = int(float(value1))
+			value1_new = int(value1)
 			print(value1_new)
 		else:
 			value1_new = float(value1)
