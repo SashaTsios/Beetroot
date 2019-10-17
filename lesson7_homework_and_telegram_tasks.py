@@ -18,12 +18,12 @@ for element in first:
 print(final_text.format(item, sequence, count))
 
 # Remove duplicates
-remove_duplicates = [1,1,2,2, 3, 3, 3, 3, 4]
+remove_duplicates = [1,1,2,2, 8, 8, 1, 88, 13]
 removed_list = []
 for element in range(0, len(remove_duplicates)):
 	if remove_duplicates[element] not in removed_list:
 		removed_list.append(remove_duplicates[element])
-print(str(remove_duplicates) + ' after removing elements looks like: ' + str(removed_list))
+print(str(remove_duplicates) + ' after removing duplicates looks like: ' + str(removed_list))
 
 # Digits sum
 digit_n = int(input('Number: '))
@@ -31,15 +31,15 @@ digit_sum = 0
 digit_n_str = str(digit_n)
 for i in digit_n_str:
 	digit_sum += int(i)
-	print(digit_sum)
+	# print(digit_sum + int(i))
 print('For ' + str(digit_n) + ' sum of numbers: ' + str(digit_sum))
 
 # Factorial
-integer = 6
+integer = int(input('Integer: '))
 factorial = 1
 for i in range(1, integer + 1):
 	factorial *= i
-print(factorial)
+print(str(integer) + '! = ' + str(factorial))
 
 # Homework (to do before lesson)
 # Dict comprehension exercise
@@ -70,3 +70,30 @@ for element in list_i:
 print(list_j)
 list_w_tuples = [tuple(list_i), tuple(list_j)]
 print(list_w_tuples)
+
+# quiz.py
+from random import randint
+z = randint(0, 10)
+questions = [
+    "2 + 2 =",
+    "5 - 3 =",
+    "25 * 2 =",
+    "18 / 2 =",
+    "44 / 4 =",
+    "2 + 3 + 5 =",
+    "5 * 5 =",
+    "17 - 7 =",
+    "15 / 5 =",
+    "10 * 10 =",
+    "50 / 25 =",
+]
+
+answers = [4, 2, 50, 9, 11, 10, 25, 10, 3, 100, 2]
+print(questions[z])
+while True:
+	user_answer = input('Answer: ')
+	if not int(user_answer) == answers[z]:
+		print('not correct')
+	else:
+		print('good job')
+		break
