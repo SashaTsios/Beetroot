@@ -109,7 +109,7 @@ def main(car1):
             new_round = False
         else:
             step = int(input('Please enter a distance to move: '))
-            user_speed = int(input('Please enter speed per move: '))
+            user_speed = input('Please enter speed per move: ')
             allowed_actions = ('w', 'a', 's', 'd', 'q', 'i')
 
             while True:
